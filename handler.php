@@ -69,6 +69,7 @@ class Handler
                 $msg = '*Daftar command adalah sebagai berikut*
 /start
 /help
+/setting
 /menu
 /list
 /register
@@ -192,8 +193,8 @@ Seperti biasanya, KUOTA PESERTA TERBATAS (hanya 15 orang). Jadi untuk SPEcialtea
 
     private function handleInline($val)
     {
-        // handle inline message
-        // inline message contohnya bot @sicker
+        // handle inline mode
+        // inline mode contohnya bot @sticker
         global $redis;
 
         //get data from decoded update object
