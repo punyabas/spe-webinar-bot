@@ -6,7 +6,9 @@ class Handler
     {
         $this->bot_token = "insert your bot token here";
         $this->apiLink = "https://api.telegram.org/bot$this->bot_token/";
+        //group chat id to announce
         $this->chatId = "insert your group chat id here";
+        
     }
     
     //function for get message update from tele
@@ -183,7 +185,7 @@ Seperti biasanya, KUOTA PESERTA TERBATAS (hanya 15 orang). Jadi untuk SPEcialtea
         $data['parse_mode'] = 'Markdown';
     
         $redis->set('update_id', $updateId+1);
-        if($msg){
+        if($msg && ($val["chat"]["type"] == "private")){
            file_get_contents($this->apiLink."sendmessage?".http_build_query($data));    
         }
     }

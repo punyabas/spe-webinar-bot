@@ -2,7 +2,7 @@
 
 * Clone this project
 * Run ``` composer install ```
-* create bot tele from bot father
+* create telegram bot account from bot father
 * enable setting inline mode and group privacy mode 
-* insert your bot token and selected group on handler class
+* insert your bot token and selected group chat id on handler class
 * run cron.php
